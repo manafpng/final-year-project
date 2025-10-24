@@ -1,4 +1,5 @@
-# APM – Final Year Project
+# APM – Final Year Project 
+for my computer science bachelor's degree
 
 A secure password manager built with **React**, **Node.js**, **Express**, and **MongoDB**.  
 Implements **JWT authentication**, **RSA encryption**, and a **Chrome extension** for autofill functionality.
