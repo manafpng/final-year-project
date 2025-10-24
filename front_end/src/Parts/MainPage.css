@@ -1,0 +1,598 @@
+/* General reset for padding and margin to avoid inconsistencies */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-with-sidebar {
+  display: flex;
+  height: 100vh; /* Take full viewport height */
+}
+
+/* Sidebar styles */
+.pro-sidebar {
+  min-height: 100vh;
+  color: #fff;
+  background-color: #333; /* Dark background for sidebar */
+}
+
+/* Animations for sidebar items */
+.pro-sidebar .pro-menu-item {
+  transition: background-color 0.3s;
+}
+
+.pro-sidebar .pro-menu-item:hover {
+  background-color: #444; /* Slightly lighter on hover */
+}
+
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  background: #007bff; /* Blue color for the header */
+  color: white;
+}
+
+/* Content styles */
+.dashboard-content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto; /* Enable vertical scrolling */
+ /* Light grey background */
+}
+
+/* Title and Welcome Animation */
+.content-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Account Rows */
+.accounts-table {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.account-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Equal width columns */
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  justify-items: center;
+
+}
+
+.account-row.header {
+  font-weight: bold;
+    justify-items: center;
+
+}
+
+.account-website,
+.account-username,
+.account-password,
+.account-created,
+.account-actions {
+  text-align: center;
+
+}
+
+
+
+/* Buttons */
+.add-account-button,
+.logout-button,
+.delete-account-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.add-account-button {
+  background-color: #28a745; /* Green color */
+  color: white;
+}
+
+.logout-button {
+  background-color: #dc3545; /* Red color */
+  color: white;
+}
+
+.delete-account-button {
+  background-color: #f44336; /* Red color */
+  color: white;
+}
+
+/* Hover effects for buttons */
+.add-account-button:hover {
+  background-color: #218838;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+.delete-account-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .account-row {
+    grid-template-columns: 1fr 2fr; /* Adapt grid for mobile */
+  }
+
+  .account-created,
+  .account-actions {
+    grid-column: 1 / -1; /* Full width */
+  }
+}
+ /* Centered page background */
+.dashboard-container {
+  display: flex;
+  justify-content: center;       /* center horizontally */
+  align-items: flex-start;       /* start from top vertically */
+  min-height: 100vh;             /* full viewport height */
+  padding: 2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(42,123,155,1) 0%,
+    rgba(87,199,133,1) 50%,
+    rgba(237,221,83,1) 100%
+  );
+}
+
+/* Card-style box */
+.dashboard-box {
+  background:linear-gradient(90deg,rgba(254, 248, 195, 1) 0%, rgba(196, 230, 190, 1) 60%, rgba(114, 207, 190, 1) 100%);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 960px;
+  padding: 2rem;
+  position: relative;
+}
+.mypasswords { color:#07753f ;}
+
+.logout-button {
+  position: absolute;
+  top: 1.5rem;    
+  right: 1.5rem;  
+}
+
+
+.dashboard-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #07753f;       /* same green as buttons */
+  margin-bottom: 1.5rem; /* spacing before the nav bar */
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* 1. Center the navbar buttons */
+.dashboard-box .navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 2. Unified green button style for Add & Logout */
+.add-account-button,
+.logout-button {
+  background-color: #134e1a;    /* dark green */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* 3. Hover state */
+.add-account-button:hover,
+.logout-button:hover {
+  background-color: #054d29;   
+}
+
+
+.accounts-table {
+  margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;     
+  border-radius: 8px;     
+  background: #fff;    
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Header row */
+.account-row.header {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: #134e1a;      
+  color: white;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+
+/* Data rows */
+.account-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 12px 16px;
+  background-color: #fefad3;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+/* Zebra striping for readability */
+.account-row:nth-child(odd):not(.header) {
+  background-color: #fefad3;
+}
+
+/* Hover effect */
+.account-row:not(.header):hover {
+  background-color: #F7F7E1;
+}
+
+/* Action buttons in rows */
+
+
+.delete-account-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 4px;
+
+  
+}
+
+/* View (eye) button color */
+.view-button {
+  background-color: #134e1a; 
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.view-button:hover {
+  color: #054d29;
+}
+
+/* Delete (trash) button color */
+.delete-account-button {
+  color: #f44336;
+}
+.delete-account-button:hover {
+  color: #d32f2f;
+}
+
+/* Make the website cell a flex container and size icons */
+.account-website {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.platform-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+/* Ellipsis trigger */
+.ellipsis-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #134e1a;
+  padding: 4px;
+}
+
+.ellipsis-button:hover {
+  color: #054d29;
+}
+
+/* Dropdown menu container */
+.row-menu {
+  position: absolute;
+  top: calc(100% + 4px); 
+  left: 50%;              
+  transform: translateX(-50%); 
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* Menu items */
+.row-menu-item {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.row-menu-item:hover {
+  background: #f0f0f0;
+}
+
+/* Style the delete item in red */
+.row-menu-item.delete-item {
+  color: #c82333;
+}
+
+.row-menu-item.delete-item:hover {
+  background: #f8d7da;
+}
+
+/* add a thin border underneath every menu item except the last one */
+.row-menu-item {
+  padding: 8px 12px;
+}
+
+.row-menu-item:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+
+.accounts-table {
+  position: relative;     
+  border-radius: 8px;      
+  overflow: visible;       /* allow dropdown to escape */
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+
+}
+
+
+.rows-clipper {
+  border-radius: 8px;
+  overflow: visible;        
+}
+
+
+.account-row {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  padding: 12px 16px;
+  background-color: #fefad3;
+  align-items: center;
+  transition: background-color 0.2s;
+
+}
+.account-row.header {
+  background-color: #134e1a;
+  color: white;
+  font-weight: 600;
+}
+/* full‐screen translucent layer */
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+/* the white popup box */
+.confirm-modal {
+  background: #fdfae7;
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  width: 90%;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  color:#054d29;
+  
+}
+
+.confirm-modal h3 {
+  margin-bottom: 1.5rem; 
+}
+
+
+.confirm-modal p {
+  margin-top: 1rem;      
+}
+
+
+/* close “✕” in the corner */
+.confirm-close {
+  position: absolute;
+  top: 0.5rem; right: 0.5rem;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* buttons row */
+.confirm-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.confirm-yes,
+.confirm-no {
+  flex: 1;
+  padding: 0.6rem 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.confirm-yes {
+  background: #134e1a;
+  color: white;
+}
+
+.confirm-yes:hover {
+  background: #0a300e;
+}
+
+.confirm-no {
+  background: #ddd;
+  color: #333;
+}
+
+.confirm-no:hover {
+  background: #ccc;
+}
+
+.add-modal {
+  width: 90%;
+  max-width: 360px;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  background: #fdfae7;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+/* Close “×” */
+.add-modal .modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* Title */
+.add-modal h3 {
+  margin: 0 0 1.5rem;
+  color: #134e1a;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/* Form groups */
+.add-modal .form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.add-modal .form-group label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: #134e1a;
+}
+
+.add-modal .form-group input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* Generate button */
+.add-modal .generate-btn {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 1rem 0 0.5rem;
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-modal .generate-btn:hover {
+  background: #d5d5d5;
+}
+
+/* Save/Add button */
+.add-modal .save-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #134e1a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-modal .save-btn:hover {
+  background: #0a300e;
+}
+
+/* Ensure backdrop centers it */
+.modal-backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+/* wrap input + button */
+.password-input-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 2.5rem; /* room for the icon */
+}
+.password-toggle-btn {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #134e1a;
+}
+
+
+.password-input-wrapper .password-toggle-btn:hover {
+  color: #054d29;
+}

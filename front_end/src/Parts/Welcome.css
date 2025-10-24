@@ -1,0 +1,76 @@
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+
+}
+
+.welcome-box {
+  background: linear-gradient(145deg, #e8f5e9, #b2dfdb, #81c784);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 360px;
+}
+
+.welcome-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.welcome-title {
+  font-size: 50px;
+  font-weight: 700;
+  color: #1f462d;
+  margin-bottom: 5px;
+}
+
+.welcome-subtitle {
+  font-size: 20px;
+  color: #07753f;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.register-btn,
+.login-btn {
+  width: 100%;
+  padding: 14px 0;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.register-btn {
+  background-color: #07753f ;
+  color: white;
+  transition: background-color 0.3s ease;
+  
+}
+.register-btn:hover {
+  background-color: #1f462d }
+
+.login-btn {
+  background-color: #f5f5f5;
+  color: #1f462d;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-text {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #333;
+}
+.login-btn:hover {
+  background-color: #e8f5e9;
+  color: #0e3b24;
+}

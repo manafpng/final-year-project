@@ -1,0 +1,83 @@
+/* Base styling */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 350px;
+  font-family: Arial, sans-serif;
+  background-color: #fdfae7;
+  color: #134e1a;
+}
+
+/* Container */
+#popup-content {
+  padding: 24px 20px;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(254, 248, 195, 1) 0%, rgba(196, 230, 190, 1) 60%, rgba(114, 207, 190, 1) 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+#header-title {
+  color: #134e1a;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+/* Inputs */
+.input-field {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: #07753f;
+}
+
+/* Buttons */
+.action-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #134e1a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #054d29;
+}
+
+/* Password strength display */
+#passwordStrengthDisplay {
+  padding: 6px 12px;
+  font-size: 13px;
+  color: white;
+  border-radius: 6px;
+  margin-top: 8px;
+  display: inline-block;
+  max-width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.strength-weak {
+  background-color: #f44336;
+}
+
+.strength-medium {
+  background-color: #f4b400;
+}
+
+.strength-strong {
+  background-color: #0f9d58;
+}

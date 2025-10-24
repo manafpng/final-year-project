@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Advanced Password Manager",
+  "version": "1.0",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "pop_up.html",
+    "default_icon": {
+      "16": "extensionIcons/ico16.png",
+      "32": "extensionIcons/ico32.png",
+      "48": "extensionIcons/ico48.png",
+      "128": "extensionIcons/ico128.png"
+    }
+  },
+  "background": {
+    "service_worker": "b.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["extension.js"]
+    }
+  ],
+  "icons": {
+    "16": "extensionIcons/ico16.png",
+    "32": "extensionIcons/ico32.png",
+    "48": "extensionIcons/ico48.png",
+    "128": "extensionIcons/ico128.png"
+  }
+}
